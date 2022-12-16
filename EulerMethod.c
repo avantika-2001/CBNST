@@ -7,7 +7,8 @@ float f(float x, float y)
 }
 void main()
 {
-    float x0,y0,n,h,xn,yn,func;
+    float x0,y0,h,xn,yn,func;
+    int n;
     printf("Enter the initial condition:\n");
     printf("x0:");
     scanf("%f",&x0);
@@ -16,8 +17,8 @@ void main()
     printf("Enter the calculation point xn:");
     scanf("%f",&xn);
     printf("Enter the no. of steps:");
-    scanf("%f",&n);
-    h=abs(x0-y0)/n;
+    scanf("%d",&n);
+    h=(float)(xn-x0)/n;
     printf("x0\ty0\tfunc\tyn\n");
     for(int i=0;i<n;i++)
     {
